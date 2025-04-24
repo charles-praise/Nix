@@ -12,7 +12,9 @@ class SearchCubit extends Cubit<SearchState> {
     emit(SearchLoading()); // Emit a loading state
 
     List<ProductModel> filteredItems = items
-        .where((item) => item.name.toLowerCase().contains(query.toLowerCase()))
+        .where((item) =>
+            item.name.toLowerCase().trim().contains(query.toLowerCase()) ||
+            item.category.toLowerCase().trim().contains(query.toLowerCase()))
         .toList();
 
     // Emit the filtered results

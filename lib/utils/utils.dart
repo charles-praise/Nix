@@ -99,13 +99,13 @@ Padding productWidgetOne(
                   fit: StackFit.passthrough,
                   clipBehavior: Clip.none,
                   children: [
-                    cachedNetworkImage(product.image, BoxFit.cover),
+                    cachedNetworkImage(product.images[0], BoxFit.cover),
 
                     // if (showOwnerAndName)  `1
                     Positioned(
                         bottom: 1,
                         left: 0,
-                        child: circleAvatar(data: product.image)),
+                        child: circleAvatar(data: product.images[0])),
                   ],
                 ),
                 SizedBox(height: 3.h),
@@ -214,7 +214,7 @@ InkWell productWidgetTwo({
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
-                    child: cachedNetworkImage(product.image, BoxFit.cover)),
+                    child: cachedNetworkImage(product.images[0], BoxFit.cover)),
                 SizedBox(height: 5.h),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

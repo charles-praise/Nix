@@ -13,16 +13,16 @@ class ProductDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // product image list
-    List<String> imageString = [
-      productmodel.image,
-      productmodel.image,
-      productmodel.image,
-    ];
+    // List<String> imageString = [
+    //   productmodel.image,
+    //   productmodel.image,
+    //   productmodel.image,
+    // ];
     //  multiple image pages
     List<CachedNetworkImage> imagePages = List.generate(
-        imageString.length,
+        productmodel.images.length,
         (index) => cachedNetworkImage(
-              imageString[index],
+              productmodel.images[index],
               BoxFit.fitHeight,
             ));
     // main widget
@@ -74,7 +74,7 @@ class ProductDetails extends StatelessWidget {
                 children: [
                   PageView.builder(
                     controller: pageController,
-                    itemCount: imageString.length,
+                    itemCount: productmodel.images.length,
                     onPageChanged: (values) {},
                     itemBuilder: (context, index) {
                       return imagePages[index];
@@ -91,7 +91,7 @@ class ProductDetails extends StatelessWidget {
                         backgroundColor: Colors.white,
                         radius: 25,
                         child: cachedNetworkImage(
-                          productmodel.image,
+                          productmodel.sellersImage,
                           BoxFit.cover,
                         ),
                       ),

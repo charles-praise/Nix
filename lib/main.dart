@@ -200,7 +200,7 @@ List<NavigationDestination> destination = [
     tooltip: 'Products',
     selectedIcon: ImageIcon(
       AssetImage(Assets.bottomNavigationImage[10]),
-      color: Colors.deepPurple,
+      color: Colors.blue,
       size: 26,
     ),
   ),
@@ -214,7 +214,7 @@ List<NavigationDestination> destination = [
     selectedIcon: ImageIcon(
       AssetImage(Assets.bottomNavigationImage[6]),
       size: 26,
-      color: Colors.deepPurple,
+      color: Colors.blue,
     ),
   ),
   NavigationDestination(
@@ -226,7 +226,7 @@ List<NavigationDestination> destination = [
     tooltip: 'Connections',
     selectedIcon: ImageIcon(
       AssetImage(Assets.bottomNavigationImage[4]),
-      color: Colors.deepPurple,
+      color: Colors.blue,
       size: 26,
     ),
   ),
@@ -239,7 +239,7 @@ List<NavigationDestination> destination = [
     tooltip: 'Profile',
     selectedIcon: ImageIcon(
       AssetImage(Assets.bottomNavigationImage[9]),
-      color: Colors.deepPurple,
+      color: Colors.blue,
       size: 26,
     ),
   ),

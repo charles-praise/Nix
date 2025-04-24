@@ -1,15 +1,20 @@
 import '../../../export.dart';
+import '../private_chat.dart';
 
 // ---- unread Messages Widget --------
-GestureDetector unreadMessagesWidget(Friend friend, String messageCount) =>
+GestureDetector unreadMessagesWidget(
+        BuildContext context, Friend friend, String messageCount) =>
     GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const PrivateChat()));
+      },
       child: Container(
         decoration: const BoxDecoration(
-          border: Border(
-            bottom: BorderSide(color: Color(0xFF565973), width: 1.0),
-          ),
-        ),
+            // border: Border(
+            //   bottom: BorderSide(color: Color(0xFF565973), width: 1.0),
+            // ),
+            ),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 10.0),
           child: Row(
@@ -204,16 +209,20 @@ GestureDetector missedCallsWidget(
 //
 // ---- All Messages widget ------
 GestureDetector messagesWidget(
+  BuildContext context,
   Friend friend,
 ) =>
     GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const PrivateChat()));
+      },
       child: Container(
         decoration: const BoxDecoration(
-          border: Border(
-            bottom: BorderSide(color: Color(0xFF565973), width: 1.0),
-          ),
-        ),
+            // border: Border(
+            //   bottom: BorderSide(color: Color(0xFF565973), width: 1.0),
+            // ),
+            ),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 10.0),
           child: Row(
@@ -282,18 +291,19 @@ GestureDetector messagesWidget(
               Row(
                 children: <Widget>[
                   Container(
-                    width: 42.0,
-                    height: 42.0,
+                    width: 20.0,
+                    height: 20.0,
                     decoration: BoxDecoration(
                       color: Colors.transparent,
                       borderRadius: BorderRadius.circular(50.0),
                     ),
-                    // child: IconButton(
-                    //   color: Colors.black,
-                    //   icon: const Icon(Icons.call),
-                    //   onPressed: () {},
-                    // ),
+                    child: IconButton(
+                      color: Colors.black,
+                      icon: const Icon(Icons.call),
+                      onPressed: () {},
+                    ),
                   ),
+                  SizedBox(width: 15.w),
                 ],
               ),
             ],
