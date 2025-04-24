@@ -127,11 +127,15 @@ class Profile extends StatelessWidget {
             appBar: AppBar(
               backgroundColor: Colors.grey.shade200,
               title: Text(
-                'Profile',
+                'Shoplax',
                 style: Theme.of(context).textTheme.titleLarge,
               ),
               iconTheme: const IconThemeData(color: Colors.black),
               elevation: 0,
+              actions: [
+                const Icon(Icons.person, size: 30),
+                SizedBox(width: 12.w)
+              ],
             ),
             body: SingleChildScrollView(
               controller: scrollController,

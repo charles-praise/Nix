@@ -1,6 +1,3 @@
-import 'package:shoplax_by_charles/view/details/product_details.dart';
-import 'package:shoplax_by_charles/view/search/search.dart';
-
 import '../export.dart';
 
 productFilter(BuildContext context, String query, List<ProductModel> item) =>

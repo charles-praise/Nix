@@ -7,3 +7,16 @@ class Usermodel {
     required this.password,
   });
 }
+
+class Friend {
+  String name, image, message, msgTime;
+
+  Friend(this.name, this.image, this.message, this.msgTime);
+}
+
+class Message {
+  final int user;
+  final String description;
+
+  Message(this.user, this.description);
+}
